@@ -17,16 +17,18 @@ public class PlayerCollection : MonoBehaviour
         // only destory if object collided has "Collectable" Tag
         if (other.CompareTag("Collectable"))
         {
+            addPoints(1);
             Destroy(other.gameObject);
-            Collect();
+            
         }
 
     }
 
-    private void Collect()
+    private void addPoints(int points)
     {
-        score++;
-        scoreText.text = $"<b>Score:</b> {score}";
+        score = score + points;
+        //OR score += points;
+        scoreText.text = $"<b>Score:</b> {score} ";
 
     }
 }

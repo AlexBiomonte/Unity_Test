@@ -1219,11 +1219,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f429bdba5a36a54787c62629d6ad49a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
   speed: 4.5
   hero: jimbly
-  isAlive: 1
   direction: {x: 0, y: 0, z: 0}
+  playerRb: {fileID: 529450663}
 --- !u!54 &529450663
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1249,7 +1248,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 116
+  m_Constraints: 84
   m_CollisionDetection: 0
 --- !u!114 &529450664
 MonoBehaviour:
