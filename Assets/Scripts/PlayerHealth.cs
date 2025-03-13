@@ -11,6 +11,7 @@ public class PlayerHealth : MonoBehaviour
 
     public Vector3 respawnPos;
     public TMP_Text healthText;
+    public ScreenAnimation gameOverScreen;
 
     private void Start()
     {
@@ -50,9 +51,9 @@ public class PlayerHealth : MonoBehaviour
         if (points < 1)
         {
             //Add a Respawn function (Resets player pos, Reset player Points) 
-
-            resetScene();
-            //Destroy(gameObject);
+            gameOverScreen.StartFade();
+           
+            Destroy(gameObject);
         }
 
     }
@@ -66,15 +67,8 @@ public class PlayerHealth : MonoBehaviour
 
 
 
-    private void resetScene()
-    {
-        //Get active scene Name
-        string sceneName = SceneManager.GetActiveScene().name;
 
-        //load current scene
-        SceneManager.LoadScene(sceneName);
-
-    }
+  
 
 
 }
