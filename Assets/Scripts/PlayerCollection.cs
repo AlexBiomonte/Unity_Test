@@ -14,14 +14,19 @@ public class PlayerCollection : MonoBehaviour
     }
     public void OnTriggerEnter(Collider other)
     {
-       
         // only destory if object collided has "Collectable" Tag
         if (other.CompareTag("Collectable"))
         {
             Destroy(other.gameObject);
-            score++;
-            scoreText.text = $"<b>Score:</b> {score}";
+            Collect();
         }
+
+    }
+
+    private void Collect()
+    {
+        score++;
+        scoreText.text = $"<b>Score:</b> {score}";
 
     }
 }
