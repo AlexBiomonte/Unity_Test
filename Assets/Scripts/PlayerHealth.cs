@@ -30,6 +30,12 @@ public class PlayerHealth : MonoBehaviour
             Debug.Log(points + "points left");
         }
 
+        if (other.CompareTag("Fireball"))
+        {
+            damage(2);
+            Destroy(other.gameObject);
+        }
+
         if (other.CompareTag("Checkpoint"))
         {
             respawnPos = other.transform.position;
