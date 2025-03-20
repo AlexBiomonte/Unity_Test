@@ -54,6 +54,7 @@ public class PlayerHealth : MonoBehaviour
             gameOverScreen.StartFade();
            
             Destroy(gameObject);
+
         }
 
     }

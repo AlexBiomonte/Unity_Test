@@ -7,6 +7,7 @@ TagManager:
   - Collectable
   - Trap
   - Checkpoint
+  - Goal
   layers:
   - Default
   - TransparentFX
